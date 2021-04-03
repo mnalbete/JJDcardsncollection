@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 require('dotenv').config()
-var gi = require(`.gitignore`);
+const gi = require(`.gitignore`);
 
 app.get('/', (req, res) => {
     res.send("hello from node")
