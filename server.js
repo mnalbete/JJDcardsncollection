@@ -1,6 +1,5 @@
 const express = require("express")
 const app = express()
-const gi = require(`.gitignore`);
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 dotenv.config()
