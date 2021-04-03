@@ -1,0 +1,26 @@
+{
+  "name": "jjdcardsncollection",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnalbete/JJDcardsncollection.git"
+  },
+  "keywords": [],
+  "author": "MrOpihi and Jwaiikz808",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnalbete/JJDcardsncollection/issues"
+  },
+  "homepage": "https://github.com/mnalbete/JJDcardsncollection#readme",
+  "description": "pokemon sales website",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "gitignore": "^0.6.0",
+    "nodemon": "^2.0.7"
+  }
+}
