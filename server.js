@@ -1,7 +1,11 @@
 const express = require("express");
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const dotenv = require("dotenv");
 dotenv.config();
+
 // import routes
 const userRoutes = require('./routes/user');
 
@@ -19,6 +23,10 @@ mongoose.connect(
 mongoose.connection.on('error', err => {
     console.log(`DB connection error: ${err.message}`)
 });
+// middleware 
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
 // routes middleware
 app.use("/api",userRoutes);
