@@ -1,4 +1,7 @@
 const User = require("../models/user");
+let uuidv1 = require('uuidv1')
+
+console.log(uuidv1())
 
 
 exports.signup = (req, res) => {
