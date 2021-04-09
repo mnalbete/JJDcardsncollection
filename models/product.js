@@ -22,7 +22,7 @@ const productSchema = new mongoose.Schema
                 maxlength: 2000,
             },
             category: {
-                type: Objectid,
+                type: ObjectId,
                 ref: 'Category',
                 required: true,
             },
