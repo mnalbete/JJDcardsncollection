@@ -33,21 +33,21 @@ exports.create = (req, res) => {
             });
         }
         // check for all fields
-        const { name, 
-            description, 
-            price, 
-            category, 
-            quantity, 
-            shipping 
+        const { name,
+            description,
+            price,
+            category,
+            quantity,
+            shipping
         } = fields;
 
-        if (!name || 
-            !description || 
-            !price || 
-            !category || 
-            !quantity || 
+        if (!name ||
+            !description ||
+            !price ||
+            !category ||
+            !quantity ||
             !shipping
-            ) {
+        ) {
             return res.status(400).json({
                 error: 'All fields are required'
             });
@@ -80,3 +80,14 @@ exports.create = (req, res) => {
         });
     });
 };
+
+exports.remove = (req, res) => {
+    let product = req.product
+    product.remove((err, deletedProdcut) => {
+        if (err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+    })
+}
