@@ -34,7 +34,7 @@ exports.signin = (req, res) => {
         }
 
         // creat authenticate method in user model
-        if(!user.authenicate(password)) {
+        if (!user.authenicate(password)) {
             return res.status(401).json({
                 error: "Email and password dont match"
             });
@@ -46,6 +46,17 @@ exports.signin = (req, res) => {
         // return response with user and token to frontend client
         const { _id, name, email, role } = user
         return res.json({ token, user: { _id, email, name, role } })
-    })
+    });
 
-}
+};
+
+exports.signout = (req, res) => {
+    res.clearCookie("t")
+    res.json({ message: "Signout success" })
+};
+
+exports.requireSignin = expressJwt({
+    secret: process.env.JWT_SECRET,
+    algorithms: ["HS256"], // added later
+    userProperty: "auth",
+});
