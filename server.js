@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const expressValidator = require("express-validator");
 const dotenv = require("dotenv");
@@ -31,7 +31,7 @@ mongoose.connection.on('error', err => {
 // middleware 
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(expressValidator);
 
@@ -44,5 +44,6 @@ app.use("/api", productRoutes);
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`)
+    console.log(`🌎 ==> Server is running on port ${port}!`)
 });
+
