@@ -28,6 +28,10 @@ const productSchema = new mongoose.Schema
             },
             quantity: {
                 type: Number,
+                default: 0,
+            },
+            sold: {
+                type: Number,
                 require: true,
             },
             photo: {
