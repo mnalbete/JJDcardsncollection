@@ -11,11 +11,11 @@ import ProductScreen from './screens/ProductScreen'
 const App = () => {
   return (
     <Router>
-      <Header></Header>
+      <Header />
       <main className='py-3'>
         <Container>
-          <Route path='/' component={HomeScreen} exact></Route>
-          <Route path='/product/:id' component={ProductScreen}></Route>
+          <Route path='/' component={HomeScreen} exact />
+          <Route path='/product/:_id' component={ProductScreen} />
         </Container>
       </main>
       <Footer></Footer>
