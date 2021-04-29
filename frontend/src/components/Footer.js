@@ -6,11 +6,9 @@ const Footer = () => {
         <footer>
             <Container>
                 <Row>
-                    <Col className= 'text-center py-3'>
-                        Copyright @ JJDcardsncollection
-                    </Col>
+                    <Col className='text-center py-3'>Copyright &copy; JJDcardsncollection</Col>
                 </Row>
-            </Container>    
+            </Container>
         </footer>
     )
 }
